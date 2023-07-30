@@ -18,7 +18,7 @@ def first(message):
     bot1 = types.KeyboardButton('Перейти в telegram группу')
     bot2 = types.KeyboardButton('help')
     markup.row(bot1, bot2)
-    bot.send_message(message.chat.id,f'<i>Приветствуем вас, <b>{message.from_user.first_name}</b>, в нашем telegram боте</i>', \
+    bot.send_message(message.chat.id, f'<i>Приветствуем вас, <b>{message.from_user.first_name}</b>, в нашем telegram боте</i>', \
                      parse_mode='html', reply_markup=markup)
     bot.register_next_step_handler(message, txt)
 
